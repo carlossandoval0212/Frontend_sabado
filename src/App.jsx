@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import RoleSelection from './components/RoleSelection';
 import LoginDocente from './components/LoginDocente';
 import LoginAdmin from './components/LoginAdmin';
-import LogoutButton from './components/LogoutButton';
+import DashboardDocente from './components/DashboardDocente';
 import DashboardAdmin from './components/DashboardAdmin';
 import { ProtectedRouteLayout } from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
@@ -42,13 +42,7 @@ function App() {
           {/* Rutas protegidas para docentes */}
           <Route element={<ProtectedRouteLayout allowedRoles={['docente']} />}>
             <Route path="/dashboard-docente" element={
-              <div>
-                <LogoutButton />
-                <div style={{padding: '40px', textAlign: 'center'}}>
-                  <h1>Dashboard Docente</h1>
-                  <p>¡Bienvenido! Esta página se desarrollará próximamente.</p>
-                </div>
-              </div>
+              <DashboardDocente />
             } />
           </Route>
           
